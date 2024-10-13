@@ -12,8 +12,6 @@ public class Race {
         return carsForPath;
     }
 
-    //Не учитываю сценария, где скорости равны или являются пустыми значениями, в ТЗ такое нет,
-    //А для простой задачи писать лень;((
     protected static Car getFastestCar(ArrayList<Car> carsList) {
         Car car = new Car("name", -1);
 
