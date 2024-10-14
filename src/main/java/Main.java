@@ -48,7 +48,7 @@ public class Main {
                     ArrayList<Car> carsBeforeDay = Race.calculationPath(carsList);
 
                     System.out.println("Самый быстрый автомобиль: " +
-                            Race.getFastestCar(carsBeforeDay).name + ".");
+                            Race.getFastestCar(carsBeforeDay).getName() + ".");
                     return;
                 }
             case "нет":

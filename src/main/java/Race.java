@@ -7,7 +7,10 @@ public class Race {
 
         for (int i = 0; i < carsForPath.size(); i++) {
             int hoursInDay = 24;
-            carsForPath.get(i).speed *= hoursInDay;
+            int speed = carsForPath.get(i).getSpeed();
+
+            speed *= hoursInDay;
+            carsForPath.get(i).setSpeed(speed);
         }
         return carsForPath;
     }
@@ -16,9 +19,13 @@ public class Race {
         Car car = new Car("name", -1);
 
         for (int i = 0; i < carsList.size(); i++) {
-            if (carsList.get(i).speed > car.speed) {
-                car.speed = carsList.get(i).speed;
-                car.name = carsList.get(i).name;
+            int speedCarInList = carsList.get(i).getSpeed();
+            int speedCar = car.getSpeed();
+            String nameCarInList = carsList.get(i).getName();
+
+            if (speedCarInList > speedCar) {
+                car.setSpeed(speedCarInList);
+                car.setName(nameCarInList);
             }
         }
         return car;
